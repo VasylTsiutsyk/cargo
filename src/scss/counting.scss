@@ -1,5 +1,8 @@
 .counting {
     padding: 100px 0;
+    @include respond-below(sm) {
+        padding: 45px 0;
+    }
     &__wrap {
         text-align: center;
     }
@@ -14,11 +17,15 @@
     }
     &__list {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 32px;
     }
     &__item {
         padding: 10px;
         width: calc(100%/5);
+        @include respond-below(sm) {
+            width: calc(100%/2);
+        }
         &.active {
             h3,
             p {
@@ -42,23 +49,39 @@
         align-items: flex-end;
         justify-content: space-between;
         text-align: left;
+        @include respond-below(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__inputs {
         margin: -15px;
         width: calc(100% / 2);
         display: flex;
         flex-wrap: wrap;
+        @include respond-below(sm) {
+            width: calc(100% / 1);
+            margin-bottom: 35px;
+        }
     }
     &__input-box {
-        width: calc(100% / 2- 15px);
+        width: calc(100% / 2 - 15px);
+        @include respond-below(sm) {
+            width: calc(100% / 1);
+        }
         input {
             display: inline-block;
             margin: 15px;
+            @include respond-below(sm) {
+                margin: 15px 0;
+            }
         }
     }
     &__extra {
         width: calc(100% / 2);
-        // outline: 1px solid blue;
+        @include respond-below(sm) {
+            width: calc(100% / 1);
+        }
         h3 {
             margin-bottom: 22px;
             font-weight: bold;
@@ -74,6 +97,9 @@
                 margin: 0 16px;
                 padding-right: 32px;
                 position: relative;
+                @include respond-below(sm) {
+                    padding-right: 0;
+                }
                 &:first-of-type::after {
                     content: '';
                     position: absolute;
@@ -100,6 +126,16 @@
             &__btn {
                 width: calc(100%/2);
                 margin: 0 16px;
+            }
+            &__input {
+                @include respond-below(sm) {
+                    display: none;
+                }
+            }
+            &__btn {
+                @include respond-below(sm) {
+                    width: calc(100%/1);
+                }
             }
             &__custom-check {
                 display: inline-block;

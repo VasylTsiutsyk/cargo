@@ -443,9 +443,8 @@
 
 .advantages__item {
   width: calc(100% / 3);
-  padding: 50px;
+  padding: 50px 50px 50px 95px;
   min-height: 100px;
-  padding-left: 95px;
   font-weight: bold;
   font-size: 24px;
   line-height: 34px;
@@ -478,6 +477,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 }
 
@@ -528,7 +529,7 @@
 }
 
 .counting__input-box {
-  width: calc(100% / 2- 15px);
+  width: calc(100% / 2 - 15px);
 }
 
 .counting__input-box input {
@@ -661,6 +662,11 @@
 
 .consultation__form {
   margin: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -671,7 +677,7 @@
 
 .consultation__input,
 .consultation__btn {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - 30px);
   margin: 15px;
 }
 
@@ -713,6 +719,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .testimonials__item:nth-of-type(2n) {
@@ -724,7 +732,6 @@
 
 .testimonials__item > div {
   width: calc(100%/2);
-  outline: 1px solid blue;
 }
 
 .testimonials__txt-box {
@@ -742,6 +749,7 @@
 
 .testimonials__img-box {
   position: relative;
+  min-height: 156px;
 }
 
 .testimonials__img-box img {
@@ -806,6 +814,22 @@
 .footer__wrap a:active,
 .footer__wrap a:focus {
   color: #F4D35E;
+}
+
+.footer__logo {
+  max-width: 240px;
+}
+
+.footer__logo h3 {
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.footer__logo p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .footer__title {
@@ -889,7 +913,6 @@ ul {
   max-width: 1210px;
   margin: 0 auto;
   padding: 0 20px;
-  outline: 1px solid black;
 }
 
 html {
@@ -904,6 +927,7 @@ html {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -1062,6 +1086,10 @@ html {
   .shipping__type {
     width: 25%;
   }
+
+  .advantages__item {
+    width: calc(100% / 2);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1145,10 +1173,136 @@ html {
     text-align: center;
   }
 
+  .advantages {
+    padding: 45px 0;
+  }
+
+  .advantages__item {
+    width: calc(100% / 1);
+    padding: 75px 18px 18px 18px;
+    background-position: 50% 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .counting {
+    padding: 45px 0;
+  }
+
+  .counting__item {
+    width: calc(100%/2);
+  }
+
+  .counting__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .counting__inputs {
+    width: calc(100% / 1);
+    margin-bottom: 35px;
+  }
+
+  .counting__input-box {
+    width: calc(100% / 1);
+  }
+
+  .counting__input-box input {
+    margin: 15px 0;
+  }
+
+  .counting__extra {
+    width: calc(100% / 1);
+  }
+
+  .counting__extra ul li {
+    padding-right: 0;
+  }
+
+  .counting__extra .extra__input {
+    display: none;
+  }
+
+  .counting__extra .extra__btn {
+    width: calc(100%/1);
+  }
+
+  .consultation__wrap {
+    padding: 45px 0;
+    text-align: center;
+  }
+
+  .consultation__img {
+    z-index: -1;
+    bottom: 8px;
+  }
+
+  .consultation__input,
+  .consultation__btn {
+    width: calc(100% / 1);
+  }
+
+  .testimonials {
+    padding: 45px 0;
+  }
+
+  .testimonials__item > div {
+    width: calc(100%/1);
+  }
+
+  .testimonials__txt-box {
+    padding: 20px 0;
+  }
+
+  .footer {
+    padding: 45px 0;
+  }
+
+  .footer__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__socs {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .footer__nav {
+    display: none;
+  }
+
+  .footer__shippings {
+    display: none;
+  }
+
   .btn {
+    width: 100%;
     padding: 12px 18px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .input {
+    width: 100%;
   }
 }
 @supports (-webkit-appearance:none){
