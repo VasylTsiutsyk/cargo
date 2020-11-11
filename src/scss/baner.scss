@@ -1,0 +1,59 @@
+//baner
+.baner {
+    &__bg {
+        position: relative;
+        min-height: 100vh;
+        background: linear-gradient(84.17deg, #52B2DC -1.24%, #2C6EA8 116.12%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__content {
+        padding: 182px 0 0 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include respond-below(md) {
+            padding: 130px 0 0 0;
+        }
+        @include respond-below(sm) {
+            padding: 92px 0 0 0;
+        }
+    }
+    .slide {
+        text-align: center;
+        margin-bottom: 55px;
+        &__title {
+            margin-bottom: 38px;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 59px;
+            color: $color-light;
+            @include respond-below(sm) {
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+    }
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__image-left {
+        margin: 0 30px;
+        padding-bottom: 246/1170*100%;
+        flex: 0 0 283/1170*100%;
+        background-image: url('../img/truck1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__image-right {
+        flex: 0 0 815/1170*100%;
+        padding-bottom: 246/1170*100%;
+        background-image: url('../img/truck2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

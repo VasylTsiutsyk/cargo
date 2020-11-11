@@ -1,0 +1,116 @@
+// @import './fonts.scss';
+@import './mixins.scss';
+@import './vars.scss';
+@import './header.scss';
+@import './burger.scss';
+@import './baner.scss';
+@import './about.scss';
+@import './shipping.scss';
+@import './scheme.scss';
+@import './advantages.scss';
+@import './counting.scss';
+@import './consultation.scss';
+@import './testimonials.scss';
+@import './clients.scss';
+@import './footer.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 20px;
+    outline: 1px solid black;
+}
+
+html {
+    font-family: $ff-base;
+}
+
+.btn {
+    padding: 15px 35px;
+    background: $color-yellow;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    @include respond-below(sm) {
+        padding: 12px 18px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-black;
+}
+
+.title--white {
+    color: $color-light;
+}
+
+.title-underline {
+    display: inline-block;
+    width: 55px;
+    height: 3px;
+    background: $color-yellow;
+    border-radius: 10px;
+}
+
+.title-line {
+    margin-right: 8px;
+    display: inline-block;
+    width: 23px;
+    height: 3px;
+    background: $color-yellow;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.txt {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-black;
+}
+
+.input {
+    padding: 12px 20px;
+    border: 2px solid $color-olive;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-black;
+    background-color: inherit;
+    outline: none;
+    &::placeholder {
+        color: rgba($color-black, 0.3);
+    }
+    &:focus {
+        box-shadow: 0px 0px 5px 4px rgba($color-olive, 0.5);
+    }
+}
+
+.input--white {
+    border: 2px solid $color-light;
+    color: rgba($color-light, 0.65);
+    &::placeholder {
+        color: rgba($color-light, 0.65);
+    }
+    &:focus {
+        box-shadow: 0px 0px 5px 4px rgba($color-light, 0.5);
+    }
+}
