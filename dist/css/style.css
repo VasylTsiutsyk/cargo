@@ -766,6 +766,60 @@
   padding-bottom: 100px;
 }
 
+.clients__slide {
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.clients__slide img {
+  max-width: 100%;
+}
+
+.clients .swiper-btn-prev,
+.clients .swiper-btn-next {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #1E4150;
+  border-radius: 50%;
+  background-image: url("../img/next.svg");
+  background-color: #FFFFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.clients .swiper-btn-prev {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+  left: 0;
+}
+
+.clients .swiper-btn-next {
+  right: 0;
+}
+
+.clients .swiper-btn-next.swiper-button-disabled,
+.clients .swiper-btn-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
 .footer {
   padding: 58px 0;
   background: -o-linear-gradient(5.83deg, #52B2DC -1.24%, #2C6EA8 116.12%);
@@ -1260,6 +1314,10 @@ html {
     padding: 20px 0;
   }
 
+  .clients {
+    display: none;
+  }
+
   .footer {
     padding: 45px 0;
   }
@@ -1308,6 +1366,7 @@ html {
 @supports (-webkit-appearance:none){
 .baner__image-left{background-image:url("../img/truck1.webp")}
 .baner__image-right{background-image:url("../img/truck2.webp")}
+.clients .swiper-btn-prev,.clients .swiper-btn-next{background-image:url("../img/next.svg")}
 .footer__contacts li:nth-of-type(1) a::before{background:url("../img/sms.svg")}
 .footer__contacts li:nth-of-type(2) a::before{background:url("../img/timer.svg")}
 .footer__contacts li:nth-of-type(3) a::before{background:url("../img/phone.svg")}

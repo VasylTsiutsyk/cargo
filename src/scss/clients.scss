@@ -1,3 +1,44 @@
 .clients {
     padding-bottom: 100px;
+    @include respond-below(sm) {
+        display: none;
+    }
+    &__slide {
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    .swiper-btn-prev,
+    .swiper-btn-next {
+        width: 50px;
+        height: 50px;
+        border: 2px solid $color-olive;
+        border-radius: 50%;
+        background-image: url('../img/next.svg');
+        background-color: $color-light;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .swiper-btn-prev {
+        transform: translateY(-50%) rotate(180deg);
+        left: 0;
+    }
+    .swiper-btn-next {
+        right: 0;
+    }
+    .swiper-btn-next.swiper-button-disabled,
+    .swiper-btn-prev.swiper-button-disabled {
+        opacity: .35;
+        cursor: auto;
+        pointer-events: none;
+    }
 }

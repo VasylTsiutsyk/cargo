@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-
     <title>Cargo</title>
 </head>
 
@@ -211,7 +211,7 @@
         </div>
     </section>
 
-    <section class="advantages" style="background-image: url(./img/adv-bg.jpg)">
+    <section class="advantages" style="background-image: url('./img/adv-bg.jpg')">
         <div class="advantages__bg"></div>
         <div class="container">
             <div class="advantages__wrap">
@@ -392,7 +392,46 @@
     <section class="clients">
         <div class="container">
             <div class="clients__wrap">
-                <img src="./img/walmart.png" alt="" />
+                <div class="clients__slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/aliexpress_logo.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/amazon.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/walmart.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/exxon_mobil.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/ibm.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/aliexpress_logo.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/amazon.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/walmart.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/exxon_mobil.png" alt="" />
+                        </div>
+                        <div class="clients__slide swiper-slide">
+                            <img src="./img/ibm.png" alt="" />
+                        </div>
+                    </div>
+
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+                    <div class="swiper-btn-prev"></div>
+                    <div class="swiper-btn-next"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -459,6 +498,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
