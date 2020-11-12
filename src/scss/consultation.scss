@@ -34,7 +34,7 @@
         &__btn {
             width: calc(100% / 3 - 30px);
             margin: 15px;
-            @include respond-below(sm) {
+            @include respond-below(md) {
                 width: calc(100% / 1);
             }
         }

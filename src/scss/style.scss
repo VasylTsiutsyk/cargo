@@ -36,13 +36,18 @@ html {
 
 .btn {
     padding: 15px 35px;
-    background: $color-yellow;
     border: none;
     border-radius: 30px;
+    background: $color-yellow;
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
-    white-space: nowrap;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &:active {
+        background: #ceb045;
+    }
     cursor: pointer;
     @include respond-below(sm) {
         width: 100%;

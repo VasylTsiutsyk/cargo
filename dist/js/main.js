@@ -10,6 +10,22 @@ var mySwiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-btn-next',
     prevEl: '.swiper-btn-prev'
   }
-});
+}); //scrollbar
+
+window.addEventListener('scroll', scrollFunction);
+
+function scrollFunction() {
+  var animItem = document.querySelector(".baner__image-left");
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var animItemHeight = animItem.offsetHeight;
+  var kAnimItemToBaner = 4;
+  var scrolled = winScroll / height * 100;
+  var k = 0.4;
+
+  if (animItemHeight * kAnimItemToBaner > winScroll) {
+    animItem.style.marginLeft = scrolled * k + "%";
+  }
+}
 
 },{}]},{},[1]);

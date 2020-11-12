@@ -1,4 +1,3 @@
-//baner
 .baner {
     &__bg {
         position: relative;
@@ -41,19 +40,19 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__image-left,
+    &__image-right {
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
     &__image-left {
-        margin: 0 30px;
         padding-bottom: 246/1170*100%;
         flex: 0 0 283/1170*100%;
         background-image: url('../img/truck1.png');
-        background-repeat: no-repeat;
-        background-size: contain;
     }
     &__image-right {
         flex: 0 0 815/1170*100%;
         padding-bottom: 246/1170*100%;
         background-image: url('../img/truck2.png');
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 }

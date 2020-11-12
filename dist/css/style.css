@@ -217,15 +217,18 @@
   align-items: center;
 }
 
+.baner__image-left,
+.baner__image-right {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .baner__image-left {
-  margin: 0 30px;
   padding-bottom: 21.02564%;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24.18803%;
   flex: 0 0 24.18803%;
   background-image: url("../img/truck1.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .baner__image-right {
@@ -234,8 +237,6 @@
   flex: 0 0 69.65812%;
   padding-bottom: 21.02564%;
   background-image: url("../img/truck2.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .about {
@@ -323,14 +324,14 @@
   margin-bottom: 18px;
 }
 
-.shipping__type.active {
+.shipping__type:hover {
   background: -o-linear-gradient(5.83deg, #52B2DC -1.24%, #2C6EA8 116.12%);
   background: linear-gradient(84.17deg, #52B2DC -1.24%, #2C6EA8 116.12%);
   -webkit-box-shadow: 0px 2px 12px rgba(79, 172, 216, 0.76);
   box-shadow: 0px 2px 12px rgba(79, 172, 216, 0.76);
 }
 
-.shipping__type.active h3 {
+.shipping__type:hover h3 {
   color: #F4D35E;
 }
 
@@ -485,10 +486,25 @@
 .counting__item {
   padding: 10px;
   width: calc(100%/5);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.counting__item.active h3,
-.counting__item.active p {
+.counting__item h3,
+.counting__item p {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.counting__item:hover {
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(30, 65, 80, 0.5);
+  box-shadow: 0px 0px 5px 4px rgba(30, 65, 80, 0.5);
+}
+
+.counting__item:hover h3,
+.counting__item:hover p {
   color: #F4D35E;
 }
 
@@ -975,14 +991,22 @@ html {
 
 .btn {
   padding: 15px 35px;
-  background: #F4D35E;
   border: none;
   border-radius: 30px;
+  background: #F4D35E;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  white-space: nowrap;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: #ceb045;
 }
 
 .title {
@@ -1144,6 +1168,11 @@ html {
   .advantages__item {
     width: calc(100% / 2);
   }
+
+  .consultation__input,
+  .consultation__btn {
+    width: calc(100% / 1);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1295,11 +1324,6 @@ html {
   .consultation__img {
     z-index: -1;
     bottom: 8px;
-  }
-
-  .consultation__input,
-  .consultation__btn {
-    width: calc(100% / 1);
   }
 
   .testimonials {
